@@ -8,7 +8,18 @@ router.post('/create-payment-intent', async (req, res) => {
   try {
     const { orderId, amount } = req.body;
 
-    // Create payment intent
+    // Check if using placeholder Stripe key (for development)
+    if (process.env.STRIPE_SECRET_KEY === 'sk_test_placeholder') {
+      console.log('Using mock payment intent for development');
+      
+      // Return mock client secret for development
+      res.json({
+        clientSecret: `pi_mock_${Date.now()}_secret_mock_development_key`
+      });
+      return;
+    }
+
+    // Create payment intent with real Stripe
     const paymentIntent = await stripe.paymentIntents.create({
       amount: Math.round(amount * 100), // Convert to cents
       currency: 'usd',
