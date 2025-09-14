@@ -12,6 +12,7 @@ import ordersRouter from "./routes/orders";
 import productsRouter from "./routes/products";
 import paymentsRouter from "./routes/payments";
 import adminRouter from "./routes/admin";
+import authRouter from "./routes/auth";
 
 // Initialize Express app
 const app = express();
@@ -53,6 +54,7 @@ app.use(
 app.use(express.json());
 
 // Routes
+app.use("/api/auth", authRouter);
 app.use("/api/orders", ordersRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/payments", paymentsRouter);

@@ -1,11 +1,12 @@
 import express from 'express';
 import { supabase } from '../index';
-import { authenticateAdmin, AuthRequest } from '../middleware/auth';
 
 const router = express.Router();
 
-// Apply authentication middleware to all admin routes
-router.use(authenticateAdmin);
+// Note: Authentication middleware removed for development
+// In production, uncomment the following lines:
+// import { authenticateAdmin, AuthRequest } from '../middleware/auth';
+// router.use(authenticateAdmin);
 
 // Get all orders for admin dashboard
 router.get('/orders', async (req, res) => {

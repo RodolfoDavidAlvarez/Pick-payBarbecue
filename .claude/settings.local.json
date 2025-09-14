@@ -30,7 +30,10 @@
       "Bash(find:*)",
       "Bash(open http://localhost:3000/qr)",
       "Bash(rm:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(rm:*)",
+      "Bash(node:*)",
+      "Bash(open http://localhost:3000/admin/login)"
     ],
     "deny": []
   }
