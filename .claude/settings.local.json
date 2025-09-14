@@ -29,7 +29,8 @@
       "Bash(npm run build:*)",
       "Bash(find:*)",
       "Bash(open http://localhost:3000/qr)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(curl:*)"
     ],
     "deny": []
   }
