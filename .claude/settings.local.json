@@ -20,7 +20,10 @@
       "Bash(vercel:*)",
       "WebFetch(domain:peibociexvwkgvlwuyeo.supabase.co)",
       "Bash(supabase login:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git checkout:*)",
+      "Bash(git merge:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
